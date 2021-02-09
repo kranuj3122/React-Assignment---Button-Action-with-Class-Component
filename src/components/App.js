@@ -14,7 +14,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
+      <div id='main'>
       <button id="click" onClick={this.handleClick}>click me</button>
       {this.state.flag?<Para/>:''}
       </div>
