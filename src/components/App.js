@@ -1,27 +1,25 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
+import React from 'react';
+import Para from './Para';
+import './App.css';
 
-class App extends Component {
-    constructor(props) {
-		super(props);
-	    this.state={
-		    para:''
-	    }
-	};
-	const handleClick=()=>{
-		this.setState({para:`<p id='para'>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>})
-	}
-
-    render() {
-    	return(
-    		<div id="main">
-			<button id='click' onClick={this.handleClick}>click me</button>
-		{this.state.para}
-    		</div>
-    	);
-    }
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state={
+      flag:false
+    };
+  }
+   handleClick= ()=> {
+    this.setState({flag:true});
+  }
+  render() {
+    return (
+      <div className="App">
+      <button id="click" onClick={this.handleClick}>click me</button>
+      {this.state.flag?<Para/>:''}
+      </div>
+    );
+  }
 }
 
-
 export default App;
-
