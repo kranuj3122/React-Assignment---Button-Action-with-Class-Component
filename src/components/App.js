@@ -16,7 +16,7 @@ class App extends React.Component {
     	return(
     		<div id="main">
 				<button id="click" onClick={this.show}>clickToRender</button>
-				{this.state.showMessage && <p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
+				{this.state.showMessage && <p id='para'>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
     		</div>
     	);
     }
